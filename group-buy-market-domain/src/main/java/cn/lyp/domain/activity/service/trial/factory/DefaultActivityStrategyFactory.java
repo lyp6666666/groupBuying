@@ -2,12 +2,11 @@ package cn.lyp.domain.activity.service.trial.factory;
 
 import cn.lyp.domain.activity.model.entity.MarketProductEntity;
 import cn.lyp.domain.activity.model.entity.TrialBalanceEntity;
+import cn.lyp.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.lyp.domain.activity.model.valobj.SkuVO;
 import cn.lyp.domain.activity.service.trial.node.RootNode;
 import cn.lyp.types.design.framework.tree.StrategyHandler;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Service;
 
 
@@ -27,12 +26,9 @@ public class DefaultActivityStrategyFactory {
         this.rootNode = rootNode;
     }
 
-    public StrategyHandler<MarketProductEntity,
-            DefaultActivityStrategyFactory.DynamicContext,
-            TrialBalanceEntity> strategyHandler(){
+    public StrategyHandler<MarketProductEntity, DynamicContext, TrialBalanceEntity> strategyHandler() {
         return rootNode;
     }
-
 
 
 
@@ -41,6 +37,10 @@ public class DefaultActivityStrategyFactory {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class DynamicContext{
+        //拼团活动营销配置值对象
+        private GroupBuyActivityDiscountVO groupBuyActivityDiscountVO;
+        //商品信息
+        private SkuVO skuVO;
 
     }
 

@@ -1,4 +1,4 @@
-package cn.lyp.domain.activity.service.trial;
+package cn.lyp.domain.activity.service;
 
 import cn.lyp.domain.activity.model.entity.MarketProductEntity;
 import cn.lyp.domain.activity.model.entity.TrialBalanceEntity;

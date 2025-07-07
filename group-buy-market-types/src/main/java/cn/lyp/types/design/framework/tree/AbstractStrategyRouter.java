@@ -9,7 +9,7 @@ import lombok.Setter;
  * @Description:策略路由器抽象类:
  * 根据请求参数 T 和上下文 D 路由出一个合适的策略（StrategyHandler），然后由该策略来处理逻辑，返回结果 R。
  */
-public abstract class AbstractStrategyRouter<T,D,R> implements StrategyMapper,StrategyHandler{
+public abstract class AbstractStrategyRouter<T,D,R> implements StrategyMapper<T,D,R>,StrategyHandler<T,D,R>{
 
     @Getter
     @Setter

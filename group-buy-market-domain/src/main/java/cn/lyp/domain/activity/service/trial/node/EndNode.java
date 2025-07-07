@@ -2,11 +2,15 @@ package cn.lyp.domain.activity.service.trial.node;
 
 import cn.lyp.domain.activity.model.entity.MarketProductEntity;
 import cn.lyp.domain.activity.model.entity.TrialBalanceEntity;
+import cn.lyp.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.lyp.domain.activity.model.valobj.SkuVO;
 import cn.lyp.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.lyp.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.lyp.types.design.framework.tree.StrategyHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
 
 /**
  * @Author: LypCoding
@@ -22,13 +26,28 @@ public class EndNode extends AbstractGroupBuyMarketSupport<
 
 
     @Override
-    public Object apply(Object requestParameter, Object dynamicContext) throws Exception {
-        return null;
+    public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+
+        GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = dynamicContext.getGroupBuyActivityDiscountVO();
+        SkuVO skuVO = dynamicContext.getSkuVO();
+
+        // 返回空结果
+        return TrialBalanceEntity.builder()
+                .goodsId(skuVO.getGoodsId())
+                .goodsName(skuVO.getGoodsName())
+                .originalPrice(skuVO.getOriginalPrice())
+                .deductionPrice(new BigDecimal("0.00"))
+                .targetCount(groupBuyActivityDiscountVO.getTarget())
+                .startTime(groupBuyActivityDiscountVO.getStartTime())
+                .endTime(groupBuyActivityDiscountVO.getEndTime())
+                .isVisible(false)
+                .isEnable(false)
+                .build();
     }
 
 
     @Override
-    public StrategyHandler get(Object requestParameter, Object dynamicContext) {
-        return null;
+    public StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> get(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+        return defaultStrategyHandler;
     }
 }
