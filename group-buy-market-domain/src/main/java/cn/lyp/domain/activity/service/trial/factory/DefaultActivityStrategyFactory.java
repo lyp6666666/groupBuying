@@ -9,6 +9,7 @@ import cn.lyp.types.design.framework.tree.StrategyHandler;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 
 
 /**
@@ -37,10 +38,13 @@ public class DefaultActivityStrategyFactory {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class DynamicContext{
+
         //拼团活动营销配置值对象
         private GroupBuyActivityDiscountVO groupBuyActivityDiscountVO;
         //商品信息
         private SkuVO skuVO;
+        //折扣价格
+        private BigDecimal deductionPrice;
 
     }
 
