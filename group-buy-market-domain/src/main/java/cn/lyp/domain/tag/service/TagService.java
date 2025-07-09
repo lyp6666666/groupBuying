@@ -1,7 +1,8 @@
 package cn.lyp.domain.tag.service;
 
-import cn.bugstack.domain.tag.adapter.repository.ITagRepository;
-import cn.bugstack.domain.tag.model.entity.CrowdTagsJobEntity;
+
+import cn.lyp.domain.tag.adapter.repository.ITagRepository;
+import cn.lyp.domain.tag.model.entity.CrowdTagsJobEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
