@@ -13,17 +13,17 @@ import java.util.concurrent.Callable;
 public class QuerySkuVOFromDBThreadTask implements Callable<SkuVO> {
 
 
-    private final String goodId;
+    private final String goodsId;
 
     private final IActivityRepository activityRepository;
 
-    public QuerySkuVOFromDBThreadTask(String goodId, IActivityRepository activityRepository) {
-        this.goodId = goodId;
+    public QuerySkuVOFromDBThreadTask(String goodsId, IActivityRepository activityRepository) {
+        this.goodsId = goodsId;
         this.activityRepository = activityRepository;
     }
 
     @Override
     public SkuVO call() throws Exception {
-        return activityRepository.querySkuByGoodsId(goodId);
+        return activityRepository.querySkuByGoodsId(goodsId);
     }
 }

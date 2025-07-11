@@ -30,7 +30,9 @@ public abstract class AbstractMultiThreadStrategyRouter<T,D,R> implements Strate
 
     @Override
     public R apply(T requestParameter, D dynamicContext) throws Exception {
+        //异步加载数据
         multiThread(requestParameter,dynamicContext);
+        //业务逻辑受理
         return doApply(requestParameter,dynamicContext);
     }
 

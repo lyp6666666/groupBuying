@@ -7,6 +7,7 @@ import cn.lyp.domain.activity.service.trial.factory.DefaultActivityStrategyFacto
 import cn.lyp.types.design.framework.tree.StrategyHandler;
 import cn.lyp.types.enums.ResponseCode;
 import cn.lyp.types.exception.AppException;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,8 @@ public class RootNode extends AbstractGroupBuyMarketSupport<MarketProductEntity,
 
     @Override
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
-
+        log.info("拼团商品查询试算服务-RootNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
+        // 参数判断
         if(StringUtils.isBlank(requestParameter.getUserId()) ||
                 StringUtils.isBlank(requestParameter.getGoodsId()) ||
                 StringUtils.isBlank(requestParameter.getSource()) ||

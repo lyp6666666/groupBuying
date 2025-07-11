@@ -17,11 +17,7 @@ import java.util.concurrent.TimeoutException;
  * @Date: 2025/7/3 11:29
  * @Description:
  */
-public abstract class AbstractGroupBuyMarketSupport<MarketProductEntity , DynamicContext ,TrialBalanceEntity>
-        extends AbstractMultiThreadStrategyRouter<
-                cn.lyp.domain.activity.model.entity.MarketProductEntity,
-                DefaultActivityStrategyFactory.DynamicContext,
-                cn.lyp.domain.activity.model.entity.TrialBalanceEntity> {
+public abstract class AbstractGroupBuyMarketSupport<MarketProductEntity, DynamicContext, TrialBalanceEntity> extends AbstractMultiThreadStrategyRouter<cn.lyp.domain.activity.model.entity.MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, cn.lyp.domain.activity.model.entity.TrialBalanceEntity> {
 
     protected long timeout =  500;
 
