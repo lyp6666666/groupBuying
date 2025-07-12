@@ -1,8 +1,11 @@
 package cn.lyp.domain.activity.model.valobj;
 
+import cn.lyp.types.common.Constants;
 import lombok.*;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @Author: LypCoding
@@ -45,6 +48,35 @@ public class GroupBuyActivityDiscountVO {
     private String tagId;
     /** 人群标签规则范围 */
     private String tagScope;
+
+    /**
+     * 可见限制
+     * 只要存在那么一个值，那么首次获取的默认值就是false
+     */
+    public boolean isVisible() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        if (split.length > 0 && Objects.equals(split[0], "1") && StringUtils.isNotBlank(split[0])) {
+            return TagScopeEnumVO.VISIBLE.getRefuse();
+        }
+        return TagScopeEnumVO.VISIBLE.getAllow();
+    }
+
+
+    /**
+     * 参与限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isEnable() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        if (split.length == 2 && Objects.equals(split[1], "2") && StringUtils.isNotBlank(split[1])) {
+            return TagScopeEnumVO.ENABLE.getRefuse();
+        }
+        return TagScopeEnumVO.ENABLE.getAllow();
+    }
+
+
 
     @Getter
     @Builder
