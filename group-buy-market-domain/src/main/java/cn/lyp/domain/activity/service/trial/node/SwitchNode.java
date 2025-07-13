@@ -5,6 +5,8 @@ import cn.lyp.domain.activity.model.entity.TrialBalanceEntity;
 import cn.lyp.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.lyp.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.lyp.types.design.framework.tree.StrategyHandler;
+import cn.lyp.types.enums.ResponseCode;
+import cn.lyp.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +30,15 @@ public class SwitchNode
 
     @Override
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
+
+        String userId = requestParameter.getUserId();
+        if(repository.downgradeSwitch()){
+            throw new AppException(ResponseCode.E0003.getCode(),ResponseCode.E0003.getInfo());
+        }
+        if(repository.cutRange(userId)){
+            throw new AppException(ResponseCode.E0004.getCode(),ResponseCode.E0004.getInfo());
+        }
+
         return router(requestParameter,dynamicContext);
     }
 
