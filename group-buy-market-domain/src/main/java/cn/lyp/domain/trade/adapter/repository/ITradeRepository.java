@@ -1,6 +1,7 @@
 package cn.lyp.domain.trade.adapter.repository;
 
 import cn.lyp.domain.trade.model.aggregate.GroupBuyOrderAggregate;
+import cn.lyp.domain.trade.model.entity.GroupBuyActivityEntity;
 import cn.lyp.domain.trade.model.entity.MarketPayOrderEntity;
 import cn.lyp.domain.trade.model.valobj.GroupBuyProgressVO;
 
@@ -18,4 +19,7 @@ public interface ITradeRepository {
 
     GroupBuyProgressVO queryGroupBuyProgress(String teamId);
 
+    GroupBuyActivityEntity queryGroupBuyActivityByActivityId(Long activityId);
+
+    Integer queryOrderCountByActivityId(Long activityId, String useId);
 }

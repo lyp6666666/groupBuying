@@ -1,26 +1,24 @@
-package cn.lyp.infrastructure.dao.po;
+package cn.lyp.domain.trade.model.entity;
 
-
-import java.util.Date;
-
+import cn.lyp.types.enums.ActivityStatusEnumVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 拼团活动
- * @TableName group_buy_activity
- */
+import java.util.Date;
 
+/**
+ * @Author: LypCoding
+ * @Date: 2025/7/19 20:52
+ * @Description:
+ */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class GroupBuyActivity {
+public class GroupBuyActivityEntity {
 
-    /** 自增 */
-    private Long id;
     /** 活动ID */
     private Long activityId;
     /** 活动名称 */
@@ -42,7 +40,7 @@ public class GroupBuyActivity {
     /** 拼团时长（分钟） */
     private Integer validTime;
     /** 活动状态（0创建、1生效、2过期、3废弃） */
-    private Integer status;
+    private ActivityStatusEnumVO status;
     /** 活动开始时间 */
     private Date startTime;
     /** 活动结束时间 */
@@ -51,11 +49,6 @@ public class GroupBuyActivity {
     private String tagId;
     /** 人群标签规则范围 */
     private String tagScope;
-    /** 创建时间 */
-    private Date createTime;
-    /** 更新时间 */
-    private Date updateTime;
-
 
 
 }

@@ -1,4 +1,4 @@
-25-07-16.22:42:08.148 [main            ] ERROR MarketTradeController  - 营销交易锁单业务异常:xiaofuge LockMarketPayOrderRequestDTO:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"409242547353","source":"s01","userId":"xiaofuge"}
+25-07-19.23:09:20.732 [main            ] ERROR MarketTradeController  - 营销交易锁单业务异常:xfg02 LockMarketPayOrderRequestDTO:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"915129845614","source":"s01","userId":"xfg02"}
 cn.lyp.types.exception.AppException: null
 	at cn.lyp.domain.activity.service.trial.node.SwitchNode.doApply(SwitchNode.java:36)
 	at cn.lyp.domain.activity.service.trial.node.SwitchNode.doApply(SwitchNode.java:20)
@@ -8,7 +8,7 @@ cn.lyp.types.exception.AppException: null
 	at cn.lyp.domain.activity.service.trial.node.RootNode.doApply(RootNode.java:22)
 	at cn.lyp.types.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:36)
 	at cn.lyp.domain.activity.service.IndexGroupBuyMarketServiceImpl.indexMarketTrial(IndexGroupBuyMarketServiceImpl.java:28)
-	at cn.lyp.trigger.http.MarketTradeController.lockMarketPayOrder(MarketTradeController.java:99)
+	at cn.lyp.trigger.http.MarketTradeController.lockMarketPayOrder(MarketTradeController.java:98)
 	at cn.lyp.test.trigger.test_lockMarketPayOrder.test_lockMarketPayOrder(test_lockMarketPayOrder.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
