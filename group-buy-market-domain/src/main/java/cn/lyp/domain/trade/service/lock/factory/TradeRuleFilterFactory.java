@@ -1,10 +1,10 @@
-package cn.lyp.domain.trade.service.factory;
+package cn.lyp.domain.trade.service.lock.factory;
 
 import cn.lyp.domain.trade.model.entity.GroupBuyActivityEntity;
 import cn.lyp.domain.trade.model.entity.TradeRuleCommendEntity;
 import cn.lyp.domain.trade.model.entity.TradeRuleFilterBackEntity;
-import cn.lyp.domain.trade.service.filter.ActivityUsabilityRuleFilter;
-import cn.lyp.domain.trade.service.filter.UserTakeLimitRuleFilter;
+import cn.lyp.domain.trade.service.lock.filter.ActivityUsabilityRuleFilter;
+import cn.lyp.domain.trade.service.lock.filter.UserTakeLimitRuleFilter;
 import cn.lyp.types.design.framework.link.model2.LinkArmory;
 import cn.lyp.types.design.framework.link.model2.chain.BusinessLinkedList;
 import lombok.AllArgsConstructor;

@@ -11,7 +11,7 @@ import cn.lyp.domain.trade.model.valobj.GroupBuyProgressVO;
  * @Date: 2025/7/16 21:11
  * @Description:
  */
-public interface ITradeOrderService {
+public interface ITradeLockOrderService {
 
     /**
      * 查询，未被支付消费完成的营销优惠订单
