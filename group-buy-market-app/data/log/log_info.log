@@ -1,16 +1,16 @@
-25-07-22.00:22:05.415 [main            ] INFO  ITradeLockOrderServiceTest - Starting ITradeLockOrderServiceTest using Java 1.8.0_402 on 陆的LX with PID 5028 (started by 53256 in E:\javaProject\拼团\group-buy-market\group-buy-market-app)
-25-07-22.00:22:05.416 [main            ] INFO  ITradeLockOrderServiceTest - The following 1 profile is active: "dev"
-25-07-22.00:22:06.398 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-22.00:22:06.402 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-22.00:22:06.442 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-25-07-22.00:22:06.721 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:22:07.120 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.lyp.config.RedisClientConfigProperties' of type [cn.lyp.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:22:07.882 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-22.00:22:19.826 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'DCCValueBeanFactory' defined in file [E:\javaProject\拼团\group-buy-market\group-buy-market-app\target\classes\cn\lyp\config\DCCValueBeanFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/lyp/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-25-07-22.00:22:19.839 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+25-07-23.23:52:31.131 [main            ] INFO  GroupBuyDiscountDaoTest - Starting GroupBuyDiscountDaoTest using Java 1.8.0_402 on 陆的LX with PID 24372 (started by 53256 in E:\javaProject\拼团\group-buy-market\group-buy-market-app)
+25-07-23.23:52:31.132 [main            ] INFO  GroupBuyDiscountDaoTest - The following 1 profile is active: "dev"
+25-07-23.23:52:32.085 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-23.23:52:32.088 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-23.23:52:32.132 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+25-07-23.23:52:32.457 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-07-23.23:52:32.862 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.lyp.config.RedisClientConfigProperties' of type [cn.lyp.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-07-23.23:52:35.024 [main            ] INFO  Version                - Redisson 3.26.0
+25-07-23.23:52:48.330 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'DCCValueBeanFactory' defined in file [E:\javaProject\拼团\group-buy-market\group-buy-market-app\target\classes\cn\lyp\config\DCCValueBeanFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/lyp/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
+25-07-23.23:52:48.342 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-07-22.00:22:19.880 [main            ] ERROR SpringApplication      - Application run failed
+25-07-23.23:52:48.375 [main            ] ERROR SpringApplication      - Application run failed
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'DCCValueBeanFactory' defined in file [E:\javaProject\拼团\group-buy-market\group-buy-market-app\target\classes\cn\lyp\config\DCCValueBeanFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/lyp/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
@@ -86,11 +86,11 @@ Caused by: org.redisson.client.RedisConnectionException: java.util.concurrent.Ex
 	at org.redisson.Redisson.<init>(Redisson.java:71)
 	at org.redisson.Redisson.create(Redisson.java:116)
 	at cn.lyp.config.RedisClientConfig.redissonClient(RedisClientConfig.java:51)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544.CGLIB$redissonClient$0(<generated>)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544$$FastClassBySpringCGLIB$$acf4284a.invoke(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8.CGLIB$redissonClient$0(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8$$FastClassBySpringCGLIB$$a99dc61e.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544.redissonClient(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8.redissonClient(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,7 +143,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
-25-07-22.00:22:19.882 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3d34d211] to prepare test instance [cn.lyp.test.trade.ITradeLockOrderServiceTest@4e245739]
+25-07-23.23:52:48.378 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@ae13544] to prepare test instance [cn.lyp.test.infrastructure.dao.GroupBuyDiscountDaoTest@f238e4f]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -222,11 +222,11 @@ Caused by: org.redisson.client.RedisConnectionException: java.util.concurrent.Ex
 	at org.redisson.Redisson.<init>(Redisson.java:71)
 	at org.redisson.Redisson.create(Redisson.java:116)
 	at cn.lyp.config.RedisClientConfig.redissonClient(RedisClientConfig.java:51)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544.CGLIB$redissonClient$0(<generated>)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544$$FastClassBySpringCGLIB$$acf4284a.invoke(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8.CGLIB$redissonClient$0(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8$$FastClassBySpringCGLIB$$a99dc61e.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$c8c8d544.redissonClient(<generated>)
+	at cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$dc4be0a8.redissonClient(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -279,38 +279,3 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
-25-07-22.00:23:19.685 [main            ] INFO  ITradeLockOrderServiceTest - Starting ITradeLockOrderServiceTest using Java 1.8.0_402 on 陆的LX with PID 16952 (started by 53256 in E:\javaProject\拼团\group-buy-market\group-buy-market-app)
-25-07-22.00:23:19.686 [main            ] INFO  ITradeLockOrderServiceTest - The following 1 profile is active: "dev"
-25-07-22.00:23:20.513 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-22.00:23:20.517 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-22.00:23:20.556 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-25-07-22.00:23:20.818 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$fca15be6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:23:21.128 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.lyp.config.RedisClientConfigProperties' of type [cn.lyp.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:23:21.747 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-22.00:23:22.591 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-25-07-22.00:23:22.603 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-25-07-22.00:23:22.645 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:23:25.058 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-22.00:23:25.129 [main            ] INFO  ITradeLockOrderServiceTest - Started ITradeLockOrderServiceTest in 5.782 seconds (JVM running for 6.557)
-25-07-22.00:23:25.627 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-07-22.00:25:13.050 [main            ] INFO  TradeSettlementOrderServiceTest - Starting TradeSettlementOrderServiceTest using Java 1.8.0_402 on 陆的LX with PID 25808 (started by 53256 in E:\javaProject\拼团\group-buy-market\group-buy-market-app)
-25-07-22.00:25:13.051 [main            ] INFO  TradeSettlementOrderServiceTest - The following 1 profile is active: "dev"
-25-07-22.00:25:13.913 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-07-22.00:25:13.917 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-07-22.00:25:13.964 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
-25-07-22.00:25:14.235 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [cn.lyp.config.RedisClientConfig$$EnhancerBySpringCGLIB$$b0f381bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:25:14.540 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-cn.lyp.config.RedisClientConfigProperties' of type [cn.lyp.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:25:15.168 [main            ] INFO  Version                - Redisson 3.26.0
-25-07-22.00:25:15.799 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-25-07-22.00:25:15.810 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-25-07-22.00:25:15.848 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-07-22.00:25:18.211 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-07-22.00:25:18.276 [main            ] INFO  TradeSettlementOrderServiceTest - Started TradeSettlementOrderServiceTest in 5.583 seconds (JVM running for 6.357)
-25-07-22.00:25:18.524 [main            ] INFO  TradeSettlementOrderService - 拼团交易-支付订单结算:xfg04 outTradeNo:228984300880
-25-07-22.00:25:18.560 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-07-22.00:25:18.717 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-07-22.00:25:18.757 [main            ] INFO  TradeSettlementOrderService - 不存在的外部交易单号或用户已退单，不需要做支付订单结算:xfg04 outTradeNo:228984300880
-25-07-22.00:25:18.886 [main            ] INFO  TradeSettlementOrderServiceTest - 请求参数:{"channel":"c01","outTradeNo":"228984300880","source":"s01","userId":"xfg04"}
-25-07-22.00:25:18.886 [main            ] INFO  TradeSettlementOrderServiceTest - 测试结果:null
-25-07-22.00:25:18.901 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-07-22.00:25:18.912 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

@@ -14,6 +14,7 @@ import cn.lyp.infrastructure.dao.po.GroupBuyActivity;
 import cn.lyp.infrastructure.dao.po.GroupBuyOrder;
 import cn.lyp.infrastructure.dao.po.GroupBuyOrderList;
 import cn.lyp.infrastructure.dao.po.NotifyTask;
+import cn.lyp.infrastructure.dcc.DCCService;
 import cn.lyp.types.common.Constants;
 import cn.lyp.types.enums.ActivityStatusEnumVO;
 import cn.lyp.types.enums.GroupBuyOrderEnumVO;
@@ -49,6 +50,9 @@ public class TradeRepository implements ITradeRepository {
 
     @Resource
     private INotifyTaskDao notifyTaskDao;
+
+    @Resource
+    private DCCService dccService;
 
 
     @Override
@@ -244,5 +248,10 @@ public class TradeRepository implements ITradeRepository {
             notifyTaskDao.insert(notifyTask);
         }
 
+    }
+
+    @Override
+    public boolean isSCBlackIntercept(String source, String channel) {
+        return dccService.isSCBlackIntercept(source, channel);
     }
 }

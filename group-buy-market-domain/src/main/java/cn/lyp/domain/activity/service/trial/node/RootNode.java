@@ -30,10 +30,10 @@ public class RootNode extends AbstractGroupBuyMarketSupport<MarketProductEntity,
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         log.info("拼团商品查询试算服务-RootNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
         // 参数判断
-        if(StringUtils.isBlank(requestParameter.getUserId()) ||
+        if (StringUtils.isBlank(requestParameter.getUserId()) ||
                 StringUtils.isBlank(requestParameter.getGoodsId()) ||
                 StringUtils.isBlank(requestParameter.getSource()) ||
-                StringUtils.isBlank(requestParameter.getChannel())){
+                StringUtils.isBlank(requestParameter.getChannel())) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(),ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
 
