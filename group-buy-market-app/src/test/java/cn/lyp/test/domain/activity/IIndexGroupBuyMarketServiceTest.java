@@ -1,9 +1,14 @@
 package cn.lyp.test.domain.activity;
 
 
+
+
+import cn.lyp.domain.activity.model.entity.MarketProductEntity;
+import cn.lyp.domain.activity.model.entity.TrialBalanceEntity;
+import cn.lyp.domain.activity.service.IIndexGroupBuyMarketService;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
