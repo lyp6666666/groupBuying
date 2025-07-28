@@ -20,9 +20,10 @@ public class LinkArmory<T, D, R> {
         }
     }
 
+
+
     public BusinessLinkedList<T, D, R> getLogicLink() {
         return logicLink;
     }
 
 }
-
