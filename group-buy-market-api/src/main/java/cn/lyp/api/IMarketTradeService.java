@@ -13,7 +13,13 @@ import cn.lyp.api.response.Response;
  */
 public interface IMarketTradeService {
 
-    Response<LockMarketPayOrderResponseDTO> lockMarketPayOrder(LockMarketPayOrderRequestDTO lockMarketPayOrderRequestDTO);
+    /**
+     * 营销锁单
+     *
+     * @param requestDTO 锁单商品信息
+     * @return 锁单结果信息
+     */
+    Response<LockMarketPayOrderResponseDTO> lockMarketPayOrder(LockMarketPayOrderRequestDTO requestDTO);
 
     /**
      * 营销结算

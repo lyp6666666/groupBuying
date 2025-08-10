@@ -1,4 +1,4 @@
-package cn.lyp.test.trade;
+package cn.lyp.test.domain.trade;
 
 import cn.lyp.domain.trade.model.entity.TradePaySettlementEntity;
 import cn.lyp.domain.trade.model.entity.TradePaySuccessEntity;
@@ -11,10 +11,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @Author: LypCoding
- * @Date: 2025/7/22 0:24
+ * @Date: 2025/8/10 11:37
  * @Description:
  */
 @Slf4j
@@ -30,11 +32,15 @@ public class TradeSettlementOrderServiceTest {
         TradePaySuccessEntity tradePaySuccessEntity = new TradePaySuccessEntity();
         tradePaySuccessEntity.setSource("s01");
         tradePaySuccessEntity.setChannel("c01");
-        tradePaySuccessEntity.setUserId("xfg04");
-        tradePaySuccessEntity.setOutTradeNo("228984300880");
+        tradePaySuccessEntity.setUserId("xfg03");
+        tradePaySuccessEntity.setOutTradeNo("562013701479");
+        tradePaySuccessEntity.setOutTradeTime(new Date());
         TradePaySettlementEntity tradePaySettlementEntity = tradeSettlementOrderService.settlementMarketPayOrder(tradePaySuccessEntity);
         log.info("请求参数:{}", JSON.toJSONString(tradePaySuccessEntity));
         log.info("测试结果:{}", JSON.toJSONString(tradePaySettlementEntity));
+
+        // 暂停，等待MQ消息。处理完后，手动关闭程序
+        new CountDownLatch(1).await();
     }
 
 }

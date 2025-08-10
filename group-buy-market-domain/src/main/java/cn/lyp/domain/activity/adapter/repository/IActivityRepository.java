@@ -1,8 +1,12 @@
 package cn.lyp.domain.activity.adapter.repository;
 
+import cn.lyp.domain.activity.model.entity.UserGroupBuyOrderDetailEntity;
 import cn.lyp.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import cn.lyp.domain.activity.model.valobj.SCSkuActivityVO;
 import cn.lyp.domain.activity.model.valobj.SkuVO;
+import cn.lyp.domain.activity.model.valobj.TeamStatisticVO;
+
+import java.util.List;
 
 /**
  * @Author: LypCoding
@@ -22,4 +26,10 @@ public interface IActivityRepository {
     boolean downgradeSwitch();
 
     boolean cutRange(String userId);
+
+    List<UserGroupBuyOrderDetailEntity> queryInProgressUserGroupBuyOrderDetailListByOwner(Long activityId, String userId, Integer ownerCount);
+
+    List<UserGroupBuyOrderDetailEntity> queryInProgressUserGroupBuyOrderDetailListByRandom(Long activityId, String userId, Integer randomCount);
+
+    TeamStatisticVO queryTeamStatisticByActivityId(Long activityId);
 }
